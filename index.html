@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperMess™ - End Your Family's Paper Mess with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Enhanced button effects */
+        button {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        /* Pulse animation for attention elements */
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Smooth transitions */
+        * {
+            transition: all 0.2s ease;
+        }
+        
+        /* Enhanced shadows */
+        .shadow-lg {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .shadow-xl {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i data-feather="file-text" class="text-blue-500 h-8 w-8"></i>
+                    <span class="ml-2 text-xl font-bold text-gray-900">PaperMess™</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-blue-500">Features</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-blue-500">How It Works</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-blue-500">Pricing</a>
+                </div>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium transition duration-300">
+                    Join Waitlist
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 animate-pulse" style="animation-duration: 5s;"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Every family has a <span class="text-blue-600">paper mess</span>.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 font-medium">
+                        This isn't how family life should be in the <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">age of AI</span>.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            <span class="flex items-center">
+                                Join the waitlist today
+                                <i data-feather="arrow-right" class="ml-2 h-5 w-5"></i>
+                            </span>
+                        </button>
+                        <button class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-md font-medium transition duration-300">
+                            Learn more
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-xl border border-gray-100 transform transition-all duration-500 hover:rotate-1">
+                    <div class="relative h-80 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 opacity-30 animate-pulse" style="animation-duration: 7s;"></div>
+                        <div class="relative z-10 text-center p-6">
+                            <div class="inline-flex items-center justify-center mb-4">
+                                <div class="bg-white p-4 rounded-full shadow-md">
+                                    <i data-feather="file-text" class="h-12 w-12 text-blue-500"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">From chaos to order</h3>
+                            <p class="text-gray-600 font-medium">Messy pile → Organized vault</p>
+                            <div class="mt-6">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold text-blue-700 bg-blue-100 rounded-full">
+                                    Powered by AI
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto Section -->
+    <section class="py-20 bg-white" id="manifesto">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+                What's the point of AI if it can't help ordinary families?
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+                We live in a world where AI can write code, generate art, and pass law exams — but parents are still losing school trip forms, forgetting insurance renewals, and scrambling for last year's GP letter.
+            </p>
+            <p class="text-xl text-gray-600 mb-8">
+                PaperMess exists to change that. AI should make life easier, not harder. We built PaperMess to bring calm, clarity, and order to family life.
+            </p>
+            <button class="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium">
+                Be part of the movement <i data-feather="arrow-right" class="ml-2 h-4 w-4"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-gray-50" id="features">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                You know the drill...
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="alert-circle" class="text-red-500 h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">The bill you meant to pay</h3>
+                    <p class="text-gray-600">Now it's overdue.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="heart" class="text-blue-500 h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">The doctor's report you need</h3>
+                    <p class="text-gray-600">But can't find.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="book" class="text-yellow-500 h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">The school letter about tomorrow's trip</h3>
+                    <p class="text-gray-600">Lost in a pile.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="car" class="text-green-500 h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">The car/MOT reminder you thought was next month</h3>
+                    <p class="text-gray-600">Already expired.</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-xl font-medium text-gray-900 mb-4">This isn't how family life should be.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promise Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0 order-2 lg:order-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">
+                        All your family's paperwork, finally in one place.
+                    </h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-5 w-5 mt-1 mr-3"></i>
+                            <span class="text-lg text-gray-700">Snap or upload letters, bills, receipts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-5 w-5 mt-1 mr-3"></i>
+                            <span class="text-lg text-gray-700">Auto-labeled into categories</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-5 w-5 mt-1 mr-3"></i>
+                            <span class="text-lg text-gray-700">Search in plain English</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="flex items-center">
+                                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                        <i data-feather="droplet" class="text-blue-500 h-4 w-4"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">Utilities & Bills</span>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="flex items-center">
+                                    <div class="bg-green-100 p-2 rounded-full mr-3">
+                                        <i data-feather="heart" class="text-green-500 h-4 w-4"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">Healthcare</span>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="flex items-center">
+                                    <div class="bg-yellow-100 p-2 rounded-full mr-3">
+                                        <i data-feather="book" class="text-yellow-500 h-4 w-4"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">School & Family</span>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="flex items-center">
+                                    <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                        <i data-feather="shopping-bag" class="text-purple-500 h-4 w-4"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">Receipts</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+                            <div class="flex items-center">
+                                <i data-feather="search" class="text-gray-400 h-4 w-4 mr-2"></i>
+                                <input type="text" placeholder="Show me GP letters from last year" class="w-full outline-none text-sm">
+                            </div>
+                        </div>
+                        <div class="text-xs text-gray-500">
+                            Try: "Do we still have the warranty for the fridge?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Carousel -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                If it matters to your family, it belongs in PaperMess.
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="briefcase" class="text-blue-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">Lawyer letters</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="heart" class="text-green-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">Medical reports</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-yellow-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="book" class="text-yellow-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">School forms</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-red-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="car" class="text-red-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">Car documents</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="home" class="text-purple-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">Utility bills</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-indigo-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="tool" class="text-indigo-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">Home repairs</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-pink-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="package" class="text-pink-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">Warranties</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="shield" class="text-gray-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">Insurance</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-teal-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="dollar-sign" class="text-teal-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">Tax returns</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="bg-orange-100 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="file-text" class="text-orange-500 h-5 w-5"></i>
+                    </div>
+                    <span class="text-sm font-medium">Legal letters</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-white" id="how-it-works">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                From chaos to calm in three steps.
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-blue-500 text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-3">Upload</h3>
+                    <p class="text-gray-600">Snap or drop in your letters/docs.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-green-500 text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-3">We Organize</h3>
+                    <p class="text-gray-600">AI auto-labels & categorizes.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-purple-500 text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-3">You Relax</h3>
+                    <p class="text-gray-600">Find, search, and get reminders in seconds.</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <button class="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium">
+                    Start your family's journey <i data-feather="arrow-right" class="ml-2 h-4 w-4"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 bg-gray-50" id="pricing">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                Simple, family-friendly pricing — no counting documents.
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm pricing-card transition duration-300">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Starter</h3>
+                    <p class="text-3xl font-bold text-gray-900 mb-6">£29<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                    <p class="text-gray-500 mb-6">For smaller households who want peace of mind.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">10 GB secure storage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Auto-label & categorize</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Search & chatbox</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">1 family member</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-md font-medium transition duration-300">
+                        Join Waitlist
+                    </button>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-500 pricing-card transition duration-300 transform scale-105">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        POPULAR
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Family</h3>
+                    <p class="text-3xl font-bold text-gray-900 mb-6">£39<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                    <p class="text-gray-500 mb-6">For busy households juggling bills, school, and health.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">50 GB secure storage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Multi-user (up to 3)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Smart reminders</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Share with advisors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Priority indexing</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-md font-medium transition duration-300">
+                        Join Waitlist
+                    </button>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm pricing-card transition duration-300">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Family+</h3>
+                    <p class="text-3xl font-bold text-gray-900 mb-6">£49<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                    <p class="text-gray-500 mb-6">For households with lots of moving parts.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">200 GB secure storage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Unlimited family members</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Advanced tools</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Gmail/Calendar integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 h-4 w-4 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Priority support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-md font-medium transition duration-300">
+                        Join Waitlist
+                    </button>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <button class="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium">
+                    Join the waitlist → Lock in early access
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emotional Closer -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+                Life is full of challenges. Paperwork shouldn't be one of them.
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+                From utility bills and tax returns to school letters and GP reports, PaperMess keeps your family's paperwork safe, searchable, and stress-free.
+            </p>
+            <p class="text-xl text-gray-600 mb-8">
+                Because family life is priceless — and the age of AI should finally make it easier.
+            </p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-md font-medium text-lg transition duration-300">
+                Join the waitlist today
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Waitlist</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="facebook" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="instagram" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="linkedin" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i data-feather="file-text" class="text-blue-500 h-6 w-6"></i>
+                    <span class="ml-2 text-lg font-bold">PaperMess</span>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    © 2023 PaperMess. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced animations
+        document.addEventListener('DOMContentLoaded', function() {
+            feather.replace();
+            
+            // Add hover effects to all cards
+            const cards = document.querySelectorAll('.feature-card, .pricing-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transition = 'all 0.3s ease';
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
